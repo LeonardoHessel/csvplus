@@ -1,0 +1,127 @@
+.grid {
+  flex: 1;
+  overflow: auto;
+  position: relative;
+  font-size: 13px;
+}
+
+.grid:focus {
+  outline: none;
+}
+
+.grid::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.grid::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+.grid__cell--selected {
+  background: color-mix(in srgb, var(--color-accent) 18%, transparent);
+  outline: 1px solid var(--color-accent);
+  outline-offset: -1px;
+}
+
+.grid__header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--color-bg-elevated);
+}
+
+.grid__body {
+  position: relative;
+}
+
+.grid__row {
+  display: flex;
+}
+
+.grid__body .grid__row {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.grid__row:nth-of-type(even) {
+  background: var(--color-bg-subtle);
+}
+
+.grid__cell {
+  flex: 1 0 160px;
+  min-width: 160px;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.grid__cell--gutter {
+  flex: 0 0 48px;
+  min-width: 48px;
+  justify-content: space-between;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.grid__cell--header {
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.grid__header-label {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid__remove-column,
+.grid__remove-row {
+  border: none;
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 1;
+  padding: 0 var(--space-1);
+  border-radius: var(--radius-sm);
+}
+
+.grid__remove-column:hover,
+.grid__remove-row:hover {
+  color: var(--color-danger);
+  background: var(--color-bg-subtle);
+}
+
+.grid__input {
+  width: 100%;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  font-size: 13px;
+  font-family: var(--font-sans);
+  padding: 2px 6px;
+}
+
+.grid__input:focus {
+  outline: none;
+}

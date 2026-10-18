@@ -1,0 +1,60 @@
+/*
+  Tokens de tema inspirados no visual do Claude Desktop:
+  paleta neutra (grafite / off-white) + um único acento de cor.
+  :root define o tema claro (padrão); [data-theme="dark"] sobrescreve para o escuro.
+*/
+
+:root {
+  --font-sans: -apple-system, "Segoe UI", Inter, Roboto, sans-serif;
+
+  --color-bg: #faf9f7;
+  --color-bg-elevated: #ffffff;
+  --color-bg-subtle: #f0eee9;
+  --color-border: #e5e1d8;
+  --color-text: #2b2a27;
+  --color-text-muted: #6f6b63;
+  --color-accent: #c96442;
+  --color-accent-contrast: #ffffff;
+  --color-danger: #c0392b;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+}
+
+:root[data-theme="dark"] {
+  --color-bg: #1f1e1c;
+  --color-bg-elevated: #2a2927;
+  --color-bg-subtle: #262523;
+  --color-border: #3a3835;
+  --color-text: #ece9e3;
+  --color-text-muted: #a39e94;
+  --color-accent: #d97757;
+  --color-accent-contrast: #1f1e1c;
+  --color-danger: #e0574a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #1f1e1c;
+    --color-bg-elevated: #2a2927;
+    --color-bg-subtle: #262523;
+    --color-border: #3a3835;
+    --color-text: #ece9e3;
+    --color-text-muted: #a39e94;
+    --color-accent: #d97757;
+    --color-accent-contrast: #1f1e1c;
+    --color-danger: #e0574a;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+}
