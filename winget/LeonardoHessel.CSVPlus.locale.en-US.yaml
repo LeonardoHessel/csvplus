@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.9.0.schema.json
+PackageIdentifier: LeonardoHessel.CSVPlus
+PackageVersion: 0.1.0
+PackageLocale: en-US
+Publisher: Leonardo Hessel
+PublisherUrl: https://github.com/LeonardoHessel
+PublisherSupportUrl: https://github.com/LeonardoHessel/csvplus/issues
+PackageName: CSVPlus
+PackageUrl: https://github.com/LeonardoHessel/csvplus
+License: GPL-3.0
+LicenseUrl: https://github.com/LeonardoHessel/csvplus/blob/master/LICENSE
+ShortDescription: Simple, lightweight, cross-platform CSV viewer and editor.
+Description: >-
+  CSVPlus is a simple, lightweight CSV viewer and editor for Windows and
+  Linux, with a modern light/dark theme interface. Open, edit, undo/redo,
+  copy/paste, and save CSV files while preserving the original delimiter
+  and encoding.
+Moniker: csvplus
+Tags:
+  - csv
+  - editor
+  - viewer
+  - spreadsheet
+ManifestType: defaultLocale
+ManifestVersion: 1.9.0

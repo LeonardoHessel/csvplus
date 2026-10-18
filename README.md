@@ -4,6 +4,22 @@ Um visualizador e editor de CSV simples, leve e multiplataforma (Windows e Linux
 
 ![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)
 
+## Instalação
+
+**Windows** (PowerShell):
+
+```powershell
+irm https://raw.githubusercontent.com/LeonardoHessel/csvplus/master/install.ps1 | iex
+```
+
+**Linux**:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/LeonardoHessel/csvplus/master/install.sh | sh
+```
+
+Ou baixe o instalador direto na [página de releases](https://github.com/LeonardoHessel/csvplus/releases/latest) (`.msi`/`.exe` para Windows, `.deb`/`.rpm`/`.AppImage` para Linux).
+
 ## Funcionalidades
 
 - Abrir, visualizar e editar arquivos CSV em um grid virtualizado (suporta milhares de linhas)
