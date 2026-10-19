@@ -32,10 +32,7 @@ pub fn register_default_handler() -> Result<String, String> {
         .set_value("CSVPlus.csv", &"")
         .map_err(|e| e.to_string())?;
 
-    std::process::Command::new("cmd")
-        .args(["/C", "start", "ms-settings:defaultapps"])
-        .spawn()
-        .ok();
+    open::that("ms-settings:defaultapps").ok();
 
     Ok(
         "CSVPlus foi registrado como opção para abrir arquivos .csv. Nas Configurações do Windows que acabaram de abrir, procure por \".csv\" e selecione CSVPlus como padrão."

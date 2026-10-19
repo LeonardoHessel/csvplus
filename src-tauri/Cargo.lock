@@ -682,6 +682,7 @@ version = "0.1.0"
 dependencies = [
  "csv",
  "encoding_rs",
+ "open",
  "serde",
  "serde_json",
  "tauri",
