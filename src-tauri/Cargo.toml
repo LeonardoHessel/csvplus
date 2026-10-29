@@ -1,6 +1,6 @@
 [package]
 name = "csvplus"
-version = "0.1.0"
+version = "0.1.1"
 description = "Visualizador e editor de CSV simples, leve e multiplataforma"
 authors = ["Leonardo Hessel"]
 license = "GPL-3.0"
